@@ -104,7 +104,14 @@ docpadConfig = {
 					tarExtractClean: true
 				}
 			]
-
+		feedr:
+			feeds:
+				tamachi_to_odaiba:
+					url: "https://api.500px.com/v1/collections/hypercubed?path=tamachi_to_odaiba&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					clean: true
+				oyama_hdr_2:
+					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr_2&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					clean: true
 
 	# =================================
 	# DocPad Events
