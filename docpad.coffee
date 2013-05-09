@@ -49,6 +49,8 @@ docpadConfig = {
 			scripts: [
 				"//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js",
 				"//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js",
+				"/vendor/twitter-bootstrap/js/bootstrap-transition.js",
+				"/vendor/twitter-bootstrap/js/bootstrap-carousel.js",
 				"/scripts/script.js"
 			]
 
@@ -86,6 +88,9 @@ docpadConfig = {
 	collections:
 		pages: (database) ->
 			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+			
+		sets: (database) ->
+			database.findAllLive({tags:$has:'set'}, [date:-1])
 
 		posts: (database) ->
 			database.findAllLive({tags:$has:'post'}, [date:-1])
@@ -107,7 +112,7 @@ docpadConfig = {
 		feedr:
 			feeds:
 				tamachi_to_odaiba:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=tamachi_to_odaiba&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=tamachi_to_odaiba&image_size[]=2&image_size[]=4&consumer_key="+process.env.consumer_key
 					clean: true
 				oyama_hdr_2:
 					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr_2&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
@@ -141,7 +146,6 @@ docpadConfig = {
 				else
 					next()
 }
-
 
 # Export our DocPad Configuration
 module.exports = docpadConfig

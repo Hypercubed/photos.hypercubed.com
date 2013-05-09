@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article id="set" class="set">
+	<% feed = @feedr.feeds[@document.feed] %>
+	<% if !!feed.photos: %>
+		<h1><%= feed.title %></h1>
+		
+		<div id="myCarousel" class="carousel slide" style="width: 900px; height: 660px; background: #333;">
+			<ol class="carousel-indicators">
+				<% for photo in feed.photos: %>
+					<li data-target="#myCarousel" data-slide-to="<%= photo.position %>" class="<%= 'active'  if photo.position == 0 %>"></li>
+				<% end %>
+			</ol>
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<% for photo in feed.photos: %>
+					<% console.log(photo) %>
+					<div class="item <%= 'active'  if photo.position == 0 %>">
+						<a href="http://500px.com/photo/<%=photo.id%>" ><img src="<%=photo.image_url[1]%>" title="<%=photo.name%>"/></a>
+					</div>
+				<% end %>
+			</div>
+			<!-- Carousel nav -->
+			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div>
+		
+	<% end %>
+</article>
+

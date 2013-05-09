@@ -3,12 +3,8 @@ layout: 'default'
 title: 'index'
 ---
 
-<% for feed in Object.keys(@feedr.feeds):  %>
-	<% feed = @feedr.feeds[feed] %>
-	<% if !!feed.photos: %>
-		<h1><%= feed.title %></h1>
-		<% for photo in feed.photos: %>
-			<a href="http://500px.com/photo/<%=photo.id%>"><img src="<%=photo.image_url[0]%>" title="<%=photo.name%>"/></a>
-		<% end %>
-	<% end %>
+<% for document in @getCollection('sets').toJSON(): %>
+	<li typeof="sioc:Set" about="<%= document.url %>">
+		<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
+	</li>
 <% end %>
