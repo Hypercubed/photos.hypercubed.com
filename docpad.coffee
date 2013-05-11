@@ -12,7 +12,7 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://website.com"
+			url: "http://hypercubed.github.io/photos.hypercubed.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -21,23 +21,23 @@ docpadConfig = {
 			]
 
 			# The default title of our website
-			title: "Your Website"
+			title: "photos.hypercubed.com"
 
 			# The website description (for SEO)
 			description: """
-				When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+				photos.hypercubed.com
 				"""
 
 			# The website keywords (for SEO) separated by commas
 			keywords: """
-				place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+				photo, photography
 				"""
 
 			# The website author's name
-			author: "Your Name"
+			author: "J. Harshbarger"
 
 			# The website author's email
-			email: "your@email.com"
+			email: ""
 
 			# Styles
 			styles: [
@@ -79,7 +79,26 @@ docpadConfig = {
 		getPreparedKeywords: ->
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
+			
+		# Get the Absolute URL of a document
+		getUrl: (_, site) ->
+			site = site || @site.url
+			
+			if (typeof _ == "string")
+				if (_[0] == "/" && _[1] != "/")
+					return site+_
+				return _
 
+			if (typeof _ == "object")
+				if (_.url)
+					return @getUrl(_.url,site)
+				if (_.map)
+					_getUrl = arguments.callee
+					return _.map((d) ->
+						return _getUrl(d,site)
+					)
+
+			return _
 
 	# =================================
 	# Collections
@@ -145,6 +164,16 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
+					
+    # =================================
+    # Environments
+		
+	environments:
+        development:
+            templateData:
+                site:
+                    url: 'http://localhost:9778'
+
 }
 
 # Export our DocPad Configuration
