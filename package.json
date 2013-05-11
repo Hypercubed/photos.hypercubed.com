@@ -1,28 +1,31 @@
 {
-  "name": "twitter-bootstrap.docpad",
-  "version": "0.10.0",
-  "description": "Twitter Bootstrap skeleton for DocPad. Simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.",
-  "homepage": "https://github.com/bevry/twitter-bootstrap.docpad",
+  "name": "photos.hypercubed.com",
+  "version": "0.1.0",
+  "description": "photos.hypercubed.com",
+  "homepage": "https://github.com/Hypercubed/photos.hypercubed.com/e",
   "keywords": [
     "docpad-skeleton",
     "docpad",
     "website",
     "bootstrap",
-    "twitter bootstrap"
+    "twitter bootstrap",
+    "hypercubed",
+    "photos"
   ],
-  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
+  "author": "J. Harshbarger <> (https://github.com/hypercubed)",
   "maintainers": [
-    "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
+    "J. Harshbarger <> (https://github.com/hypercubed)"
   ],
   "contributors": [
+    "J. Harshbarger <> (https://github.com/hypercubed)",
     "Benjamin Lupton <b@lupton.cc> (https://github.com/balupton)"
   ],
   "bugs": {
-    "url": "https://github.com/docpad/twitter-bootstrap.docpad/issues"
+    "url": "https://github.com/Hypercubed/photos.hypercubed.com/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/docpad/twitter-bootstrap.docpad.git"
+    "url": "https://github.com/Hypercubed/photos.hypercubed.com.git"
   },
   "engines": {
     "node": "0.10",
