@@ -25,3 +25,11 @@ The web-site uses [DocPad](https://github.com/bevry/docpad) for static site gene
 ## License
 
 Copyright [J. Harshbarger](http://www.hypercubed.com/). All rights reserved.
+
+## Todo:
+	Add google analytics
+	Add logo
+	About and contacts page
+	Add this?
+	Additional photo info.
+	Made with DocPad and Bootstrap

@@ -3,8 +3,8 @@ layout: 'default'
 title: 'index'
 ---
 
-<% for document in @getCollection('sets').toJSON(): %>
-	<li typeof="sioc:Set" about="<%= document.url %>">
-		<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-	</li>
-<% end %>
+<center>
+<a href="http://500px.com/photo/32588901">
+	<img src="http://pcdn.500px.net/32588901/abb545580375a60cbba51d6969b8f1f1660748aa/4.jpg" alt="Untitled by Jayson Harshbarger (hypercubed)) on 500px.com" border="0" style="margin: 0 0 5px 0;">
+	</a>
+</center>
