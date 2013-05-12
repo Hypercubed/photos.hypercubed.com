@@ -8,15 +8,17 @@ layout: default
 		<div id="set-carousel" class="carousel slide" data-interval="false">
 			<div id="set-indicators">
 				<ol class="carousel-indicators">
+					<% i = 0 %>
 					<% for photo in feed.photos: %>
-						<li data-target="#set-carousel" data-slide-to="<%= photo.position %>" class="<%= 'active'  if photo.position == 0 %>"></li>
+						<li data-target="#set-carousel" data-slide-to="<%= i++ %>" class="<%= 'active'  if (i == 0) %>"></li>
 					<% end %>
 				</ol>
 			</div>
 			<!-- Carousel items -->
 			<div class="carousel-inner">
+				<% i = 0 %>
 				<% for photo in feed.photos: %>
-					<div class="item <%= 'active'  if photo.position == 0 %>">
+					<div class="item <%= 'active'  if (i++ == 0) %>">
 						<a href="http://500px.com/photo/<%=photo.id%>" ><img src="<%=photo.image_url[1]%>" title="<%=photo.name%>"/></a>
 					</div>
 				<% end %>
