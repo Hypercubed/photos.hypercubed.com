@@ -1,8 +1,8 @@
 ```
-title: 'Oyama 2'
+title: 'Kurihashi'
 layout: 'set'
 tags: ['intro','page']
-feed: 'oyama_hdr_2'
+feed: 'kurihashi_hdr'
 pageOrder: 1
 ```
 

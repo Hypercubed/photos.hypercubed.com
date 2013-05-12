@@ -1,8 +1,8 @@
 ```
-title: 'Oyama 2'
+title: 'Yugawara'
 layout: 'set'
 tags: ['intro','page']
-feed: 'oyama_hdr_2'
+feed: 'yugawara_hdr'
 pageOrder: 1
 ```
 

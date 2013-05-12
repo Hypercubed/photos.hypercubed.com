@@ -6,11 +6,13 @@ layout: default
 	<% feed = @feedr.feeds[@document.feed] %>
 	<% if !!feed.photos: %>
 		<div id="set-carousel" class="carousel slide" data-interval="false">
-			<ol class="carousel-indicators">
-				<% for photo in feed.photos: %>
-					<li data-target="#set-carousel" data-slide-to="<%= photo.position %>" class="<%= 'active'  if photo.position == 0 %>"></li>
-				<% end %>
-			</ol>
+			<div id="set-indicators">
+				<ol class="carousel-indicators">
+					<% for photo in feed.photos: %>
+						<li data-target="#set-carousel" data-slide-to="<%= photo.position %>" class="<%= 'active'  if photo.position == 0 %>"></li>
+					<% end %>
+				</ol>
+			</div>
 			<!-- Carousel items -->
 			<div class="carousel-inner">
 				<% for photo in feed.photos: %>
