@@ -34,3 +34,4 @@ Copyright [J. Harshbarger](http://www.hypercubed.com/). All rights reserved.
 	Additional photo info.
 	Made with DocPad and Bootstrap
 	Cache files?!
+	Fix url issue.
