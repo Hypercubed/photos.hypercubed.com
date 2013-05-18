@@ -131,22 +131,22 @@ docpadConfig = {
 		feedr:
 			feeds:
 				tamachi_to_odaiba:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=tamachi_to_odaiba&image_size[]=2&image_size[]=4&consumer_key="+process.env.consumer_key
+					url: "https://api.500px.com/v1/collections/hypercubed?path=tamachi_to_odaiba&image_size[]=1&image_size[]=4&consumer_key="+process.env.consumer_key
 					clean: true
 				oyama_hdr_2:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr_2&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr_2&image_size[]=1&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
 					clean: true
 				oyama_hdr:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=oyama_hdr&image_size[]=1&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
 					clean: true
 				tokyo_hdr_2:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=tokyo_hdr_2&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=tokyo_hdr_2&image_size[]=1&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
 					clean: true
 				yugawara_hdr:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=yugawara_hdr&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=yugawara_hdr&image_size[]=1&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
 					clean: true
 				kurihashi_hdr:
-					url: "https://api.500px.com/v1/collections/hypercubed?path=kurihashi_hdr&image_size[]=2&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
+					url: "https://api.500px.com/v1/collections/hypercubed?path=kurihashi_hdr&image_size[]=1&image_size[]=4&consumer_key=5bhMxQAVqfdbD5pyDHGYrsPMzuL40BnsdHWPydJ6"
 					clean: true
 	# =================================
 	# DocPad Events
