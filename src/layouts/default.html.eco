@@ -39,7 +39,7 @@
 			<div class="container">
 				<a class="brand" href="<%= @site.url %>">Home</a>
 				<ul class="nav">
-					<% for document in @getCollection('pages').toJSON(): %>
+					<% for document in @getCollection('sets').toJSON(): %>
 						<li typeof="sioc:Page" about="<%= @getUrl(document) %>" class="<%= 'active'  if @document.url is document.url %>">
 							<a href="<%= @getUrl(document) %>" property="dc:title"><%= document.title %></a>
 						</li>
@@ -62,7 +62,7 @@
 		</footer>
 	</div><!-- /container -->
 	
-	<a href="https://github.com/Hypercubed/photos.hypercubed.com"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+	<!-- a href="https://github.com/Hypercubed/photos.hypercubed.com"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a -->
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@getUrl(@site.scripts)).toHTML() %>
