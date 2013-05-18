@@ -1,4 +1,6 @@
 
+
+
 function lazyLoad($elm) {
 	var $elm = $elm || $('.active img');
 	var lazySrc = $elm.attr('data-lazy-src');
@@ -17,10 +19,17 @@ function lazyLoad($elm) {
 }
 
 $('#set-carousel').on("slid", function() {
-				var $nextImage = $('.active img');
-				lazyLoad($nextImage);
-    });
+	window.location.hash = "#"+ parseInt($('.carousel-inner .item.active').index()+1);
+	lazyLoad();
+});
 
 $(document).ready(function() {
+  var url = document.location.toString();
+	
+	if (url.match('#')) {
+			$('.carousel-inner .item.active').removeClass('active');
+			$('.carousel-inner div:nth-child(' + url.split('#')[1] + ')').addClass('active');
+	}
+
 	lazyLoad();
 });
