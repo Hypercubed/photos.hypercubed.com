@@ -23,8 +23,9 @@ The web-site uses [DocPad](https://github.com/bevry/docpad) for static site gene
 
 
 ## License
-
-Copyright [J. Harshbarger](http://www.hypercubed.com/). All rights reserved.
+This template and source code (i.e. everything in this git repository) is licensed under the incredibly [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT License](http://creativecommons.org/licenses/MIT/)
+Images and text displayed using this template retain the copyright of the original copyright holder.  For example all images on photos.hypercubed.com are Copyright © 2011+ [J. Harshbarger](http://www.hypercubed.com/) unless stated otherwise. All rights are reserved for those items.
+Other items such as libraries are likely already licensed by their own invidual licenses.
 
 ## Todo:
 	Add google analytics
