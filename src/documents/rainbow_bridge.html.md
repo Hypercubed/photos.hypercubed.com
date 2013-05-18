@@ -1,5 +1,5 @@
 ```
-title: 'Tamachi to Odaiba'
+title: 'Rainbow Bridge'
 layout: 'set'
 tags: ['set']
 feed: 'tamachi_to_odaiba'

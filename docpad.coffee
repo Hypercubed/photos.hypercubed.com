@@ -53,8 +53,9 @@ docpadConfig = {
 				"/vendor/twitter-bootstrap/js/bootstrap-carousel.js",
 				"/scripts/script.js"
 			]
-
-
+			
+			services:
+				googleAnalytics: 'UA-102465-10'
 
 		# -----------------------------
 		# Helper Functions
@@ -180,10 +181,12 @@ docpadConfig = {
     # Environments
 		
 	environments:
-        development:
-            templateData:
-                site:
-                    url: 'http://localhost:9778'
+				development:
+						templateData:
+								site:
+										url: 'http://localhost:9778'
+										services:
+												googleAnalytics: false
 
 }
 

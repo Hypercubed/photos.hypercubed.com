@@ -28,11 +28,10 @@ Images and text displayed using this template retain the copyright of the origin
 Other items such as libraries are likely already licensed by their own invidual licenses.
 
 ## Todo:
-	Add google analytics
-	Add logo
-	About and contacts page
-	Add this?
+	Add logo?
+	About and contacts page?
+	Add this button?
+	Link to 500px.
 	Additional photo info.
-	Made with DocPad and Bootstrap
 	Cache files?!
-	Fix url issue.
+	Clean urls or not?
