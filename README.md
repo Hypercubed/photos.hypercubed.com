@@ -35,3 +35,4 @@ Other items such as libraries are likely already licensed by their own invidual 
 	Additional photo info.
 	Cache files?!
 	Clean urls or not?
+	Fix indicators
