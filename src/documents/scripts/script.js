@@ -10,10 +10,13 @@ function lazyLoad($elm) {
 	
 	if (src != lazySrc) {
 		$elm.fadeTo('fast', 0.2, function() {
-			$elm.css('background', 'url('+src+')');
-			$elm.attr('src', lazySrc).bind('load', function() {
-				$elm.removeClass('lazy').fadeTo('slow', 1);
-			});
+			//$elm.css('background', 'url('+src+')');
+			$elm
+				.attr('src', lazySrc)
+				.bind('load', function() {
+					$elm.removeClass('lazy').fadeTo('slow', 1);
+				});
+				
 		});
 	}
 }

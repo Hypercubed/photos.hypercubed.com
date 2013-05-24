@@ -7,19 +7,29 @@ layout: default
 	<% if !!feed.photos: %>
 		<div id="set-carousel" class="carousel slide" data-interval="false">
 			<div id="set-indicators">
-				<ol class="carousel-indicators">
 					<% i = 0 %>
 					<% for photo in feed.photos: %>
-						<li data-target="#set-carousel" data-slide-to="<%= i++ %>" class="<%= 'active'  if (i == 0) %>"></li>
+						<span data-target="#set-carousel" data-slide-to="<%= i++ %>" class="<%= 'active'  if (i == 0) %>" -->
+							<img src="<%=photo.image_url[0]%>" title="<%=photo.name%>" />
+						</span>
 					<% end %>
-				</ol>
 			</div>
 			<!-- Carousel items -->
 			<div class="carousel-inner">
 				<% i = 0 %>
 				<% for photo in feed.photos: %>
-					<div class="item <%= 'active'  if (i++ == 0) %>">
-						<img class="lazy" data-lazy-src="<%=photo.image_url[1]%>" src="<%=photo.image_url[0]%>" title="<%=photo.name%>"/>
+					
+					<div class="item <%= 'active'  if (i++ == 0) %>"><!-- <%= photo.width/photo.height*660 %> -->
+
+							<img class="lazy" data-lazy-src="<%=photo.image_url[1]%>" src="loader.gif" title="<%=photo.name%>" />
+							<% if photo.for_sale: %>
+								<div class="shop">
+									<h3><%=photo.name%></h3>
+									<a class="navbar-link" href="https://500px.com/photo/<%=photo.id %>/canvas">Buy Print</a>
+									<a class="navbar-link" href="https://500px.com/photo/<%=photo.id %>/download">Download</a>
+								</div>
+							<% end %>
+
 					</div>
 				<% end %>
 			</div>
@@ -27,7 +37,6 @@ layout: default
 			<a class="carousel-control left" href="#set-carousel" data-slide="prev">&lsaquo;</a>
 			<a class="carousel-control right" href="#set-carousel" data-slide="next">&rsaquo;</a>
 		</div>
-		
 	<% end %>
 </article>
 
