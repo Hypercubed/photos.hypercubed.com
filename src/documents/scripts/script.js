@@ -2,11 +2,10 @@
 
 
 function lazyLoad($elm) {
-	var $elm = $elm || $('.active img');
+	var $elm = $elm || $('.carousel-inner .item.active img');
 	var lazySrc = $elm.attr('data-lazy-src');
 	var src = $elm.attr('src');
-	
-	//console.log('lazyLoad', $elm);
+	var pos = $elm.attr('data-pos');
 	
 	if (src != lazySrc) {
 		$elm.fadeTo('fast', 0.2, function() {
@@ -19,6 +18,13 @@ function lazyLoad($elm) {
 				
 		});
 	}
+	
+	//this is ugly
+	console.log(pos);
+	$('#set-indicators a[data-slide-to]').removeClass('active');
+	$('#set-indicators a[data-slide-to='+pos+']').addClass('active');
+	
+
 }
 
 $('#set-carousel').on("slid", function() {
