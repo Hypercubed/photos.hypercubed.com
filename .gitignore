@@ -1,4 +1,5 @@
 .env
 node_modules/
 out/
+bin/
 src/files/vendor/twitter-bootstrap

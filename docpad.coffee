@@ -12,7 +12,7 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://hypercubed.github.io/photos.hypercubed.com"
+			url: "http://photos.hypercubed.com/"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -80,24 +80,24 @@ docpadConfig = {
 			@site.keywords.concat(@document.keywords or []).join(', ')
 			
 		# Get the Absolute URL of a document
-		getUrl: (_, site) ->
-			site = site || @site.url
-			
-			if (typeof _ == "string")
-				if (_[0] == "/" && _[1] != "/")
-					return site+_
-				return _
+		#getUrl: (_, site) ->
+		#	site = site || @site.url
+		#	
+		#	if (typeof _ == "string")
+		#		if (_[0] == "/" && _[1] != "/")
+		#			return site+_
+		#		return _
 
-			if (typeof _ == "object")
-				if (_.url)
-					return @getUrl(_.url,site)
-				if (_.map)
-					_getUrl = arguments.callee
-					return _.map((d) ->
-						return _getUrl(d,site)
-					)
-
-			return _
+		#	if (typeof _ == "object")
+		#		if (_.url)
+		#			return @getUrl(_.url,site)
+		#		if (_.map)
+		#			_getUrl = arguments.callee
+		#			return _.map((d) ->
+		#				return _getUrl(d,site)
+		#			)
+		#
+		#	return _
 
 	# =================================
 	# Collections

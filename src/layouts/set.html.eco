@@ -22,7 +22,7 @@ layout: default
 					
 					<div class="item <%= 'active'  if (i == 0) %>"><!-- <%= photo.width/photo.height*660 %> -->
 						<div>
-							<img data-pos="<%= i %>" class="lazy" data-lazy-src="<%=photo.image_url[1]%>" src="<%= @getUrl('/loader.gif') %>" title="<%=photo.name%>" />
+							<img data-pos="<%= i %>" class="lazy" data-lazy-src="<%=photo.image_url[1]%>" src="/loader.gif" title="<%=photo.name%>" />
 							<% if photo.for_sale: %>
 								<div class="shop">
 									<h3><%=photo.name%></h3>
